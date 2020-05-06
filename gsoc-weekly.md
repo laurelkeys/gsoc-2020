@@ -4,8 +4,8 @@
 ### 1st week (May 4)
   - [x] Setup a repository to organize documents related to GSoC
   - [ ] Look into how [`foundation/utility/job`](https://github.com/appleseedhq/appleseed/tree/master/src/appleseed/foundation/utility/job) and [`GenericFrameRenderer`](https://github.com/appleseedhq/appleseed/tree/master/src/appleseed/renderer/kernel/rendering/generic) work
-  - [ ] Read through GSoC emails and complete any tasks required by Google
-  - [ ] Schedule a meeting with Kevin to work out the best channel for communication, time zones, any initial feedback on the project proposal, etc.
+  - [x] Read through GSoC emails and complete any tasks required by Google
+  - [x] Schedule a meeting with Kevin to work out the best channel for communication, time zones, any initial feedback on the project proposal, etc.
   - [ ] Create a new `.md` listing the main [implementation references](gsoc-proposal.md#Implementation-References) for each effect, as well as the settings/properties/features available for them
 
 ### 2nd week (May 11)
