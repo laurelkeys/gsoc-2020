@@ -3,16 +3,21 @@
 ## Community Bonding *(May 4 to June 1)*
 ### 1st week (May 4)
   - [x] Setup a repository to organize documents related to GSoC
-  - [ ] Look into how [`foundation/utility/job`](https://github.com/appleseedhq/appleseed/tree/master/src/appleseed/foundation/utility/job) and [`GenericFrameRenderer`](https://github.com/appleseedhq/appleseed/tree/master/src/appleseed/renderer/kernel/rendering/generic) work
+  - [x] Look into how [`foundation/utility/job`](https://github.com/appleseedhq/appleseed/tree/master/src/appleseed/foundation/utility/job) and [`GenericFrameRenderer`](https://github.com/appleseedhq/appleseed/tree/master/src/appleseed/renderer/kernel/rendering/generic) work
   - [x] Read through GSoC emails and complete any tasks required by Google
   - [x] Schedule a meeting with Kevin to work out the best channel for communication, time zones, any initial feedback on the project proposal, etc.
-  - [ ] Create a new `.md` listing the main [implementation references](gsoc-proposal.md#Implementation-References) for each effect, as well as the settings/properties/features available for them
+  - [x] Create a new `.md` listing the main [implementation references](gsoc-proposal.md#Implementation-References) for each effect, as well as the settings/properties/features available for them
 
 ### 2nd week (May 11)
-  - [ ] Refactor the vignetting effect implementation
-  - [ ] 🚧 ...
+  - [ ] Refactoring of the vignetting effect implementation
+  - [ ] Explore Nuke's [C++ API](https://learn.foundry.com/nuke/developers/121/ndkreference/)
+  - [ ] Read the [OpenFX programming guide](https://openfx.readthedocs.io/en/master/)
+  <!-- - [ ] Explore the [Blink API](https://learn.foundry.com/nuke/developers/121/blinkreference/) / [BlinkScript](https://learn.foundry.com/nuke/developers/121/BlinkKernels/) -->
 
 ### 3rd week (May 18)
+  - [ ] Start abstracting the commonalities of post-processing effects implementation, with a "design" inspired by the Nuke API / OpenFX
+  - [ ] 🚧 ...
+
 ### 4th week (May 25)
 
 ## Phase 1 *(June 1 to June 29)*

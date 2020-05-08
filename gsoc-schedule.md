@@ -1,5 +1,7 @@
 # Project Schedule
 
+*Note: the following dates have been changed, as the [GSoC Timeline](https://developers.google.com/open-source/gsoc/timeline) was updated due to COVID-19.*
+
 ## Community Bonding *(May 4 to June 1)*
 ### 1st week (May 4)
    - Discuss with artists on Discord which effects they want the most
