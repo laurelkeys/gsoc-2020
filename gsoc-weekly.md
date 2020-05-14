@@ -10,9 +10,10 @@
 
 ### 2nd week (May 11)
   - [ ] Refactoring of the vignetting effect implementation
-  - [ ] Explore Nuke's [C++ API](https://learn.foundry.com/nuke/developers/121/ndkreference/)
+  - [x] Explore Nuke's [C++ API](https://learn.foundry.com/nuke/developers/121/ndkreference/)
   - [ ] Read the [OpenFX programming guide](https://openfx.readthedocs.io/en/master/)
-  <!-- - [ ] Explore the [Blink API](https://learn.foundry.com/nuke/developers/121/blinkreference/) / [BlinkScript](https://learn.foundry.com/nuke/developers/121/BlinkKernels/) -->
+
+*Development branch:* [`dev`](https://github.com/laurelkeys/appleseed/tree/dev)
 
 ### 3rd week (May 18)
   - [ ] Start abstracting the commonalities of post-processing effects implementation, with a "design" inspired by the Nuke API / OpenFX
