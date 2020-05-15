@@ -1,6 +1,6 @@
 # Weekly TODOs
 
-*Development branch:* [`dev`](https://github.com/laurelkeys/appleseed/tree/dev)
+*Note: specific feature branches are indicated below, and eventually get merged to [`dev`](https://github.com/laurelkeys/appleseed/tree/dev) when ready*
 
 ## Community Bonding *(May 4 to June 1)*
 ### 1st week (May 4)
