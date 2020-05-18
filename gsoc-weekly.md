@@ -11,15 +11,18 @@
   - [x] Create a new `.md` listing the main [implementation references](gsoc-proposal.md#Implementation-References) for each effect, as well as the settings/properties/features available for them
 
 ### 2nd week (May 11)
-  - [x] Refactoring of the vignetting effect implementation (*branch:* [`postfx-jobs`](https://github.com/appleseedhq/appleseed/compare/master...laurelkeys:postfx-jobs))
+  - [x] Refactoring of the vignette effect implementation (*branch:* [`postfx-jobs`](https://github.com/appleseedhq/appleseed/compare/master...laurelkeys:postfx-jobs))
   - [x] Explore Nuke's [C++ API](https://learn.foundry.com/nuke/developers/121/ndkreference/)
   - [ ] Read the [OpenFX programming guide](https://openfx.readthedocs.io/en/master/)
 
 ### 3rd week (May 18)
-  - [ ] Start abstracting the commonalities of post-processing effects implementation, with a "design" inspired by the Nuke API / OpenFX
+  - [x] Add vignette test scenes
+  - [ ] Setup environment for quickly testing rendered images
+  - [ ] Fix bugs in vignette refactoring (*branch:* [`postfx-jobs`](https://github.com/appleseedhq/appleseed/compare/master...laurelkeys:postfx-jobs))
   - [ ] 🚧 ...
 
 ### 4th week (May 25)
+  - [ ] 🚧 ...
 
 ## Phase 1 *(June 1 to June 29)*
 
