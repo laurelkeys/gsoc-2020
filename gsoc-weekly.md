@@ -11,7 +11,7 @@
   - [x] Create a new `.md` listing the main [implementation references](gsoc-proposal.md#Implementation-References) for each effect, as well as the settings/properties/features available for them
 
 ### 2nd week (May 11)
-  - [x] Refactoring of the vignette effect implementation (*branch:* [`postfx-jobs`](https://github.com/appleseedhq/appleseed/compare/master...laurelkeys:postfx-jobs))
+  - [x] Refactoring of the vignette effect implementation (*branch:* [`postfx-jobs`](https://github.com/appleseedhq/appleseed/compare/master...laurelkeys:postfx-jobs), *PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
   - [x] Explore Nuke's [C++ API](https://learn.foundry.com/nuke/developers/121/ndkreference/)
   - [ ] Read the [OpenFX programming guide](https://openfx.readthedocs.io/en/master/)
 
