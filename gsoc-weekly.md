@@ -19,13 +19,16 @@
   - [x] Add vignette test scenes
   - [x] Setup environment for quickly testing rendered images
   - [x] Fix bugs in vignette refactoring (*branch:* [`postfx-jobs`](https://github.com/appleseedhq/appleseed/compare/master...laurelkeys:postfx-jobs), *PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
-  - [ ] Weekly meeting
-  - [ ] 🚧 ...
+  - [x] Biweekly meeting
 
 ### 4th week (May 25)
+  - [ ] Start working on the Bloom effect
   - [ ] 🚧 ...
 
 ## Phase 1 *(June 1 to June 29)*
+  - [ ] Create test scenes for Bloom
+  - [ ] Biweekly meeting
+  - [ ] 🚧 ...
 
 ## Phase 2 *(June 29 to July 27)*
 
