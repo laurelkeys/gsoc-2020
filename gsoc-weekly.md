@@ -17,8 +17,9 @@
 
 ### 3rd week (May 18)
   - [x] Add vignette test scenes
-  - [ ] Setup environment for quickly testing rendered images
-  - [ ] Fix bugs in vignette refactoring (*branch:* [`postfx-jobs`](https://github.com/appleseedhq/appleseed/compare/master...laurelkeys:postfx-jobs))
+  - [x] Setup environment for quickly testing rendered images
+  - [x] Fix bugs in vignette refactoring (*branch:* [`postfx-jobs`](https://github.com/appleseedhq/appleseed/compare/master...laurelkeys:postfx-jobs), *PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
+  - [ ] Weekly meeting
   - [ ] 🚧 ...
 
 ### 4th week (May 25)
