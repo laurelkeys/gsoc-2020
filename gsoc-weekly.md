@@ -22,10 +22,11 @@
   - [x] Biweekly meeting
 
 ### 4th week (May 25)
-  - [ ] Start working on the Bloom effect (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
+  - [x] Start working on the Bloom effect (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
 
 ## Phase 1 *(June 1 to June 29)*
   - [ ] Create test scenes for Bloom
+  - [ ] Improve Bloom performance
   - [ ] Biweekly meeting
   - [ ] 🚧 ...
 
