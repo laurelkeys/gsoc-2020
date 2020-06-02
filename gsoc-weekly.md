@@ -1,6 +1,10 @@
-# Weekly TODOs
+# Weekly To-Dos
 
-*Note: specific feature branches are indicated below, and eventually get merged to [`dev`](https://github.com/laurelkeys/appleseed/tree/dev) when ready*
+ - [Community Bonding *(May 4 to June 1)*](#community-bonding-may-4-to-june-1)
+ - [Phase 1 *(June 1 to June 29)*](#phase-1-june-1-to-june-29) 👈
+ - [Phase 2 *(June 29 to July 27)*](#phase-2-june-29-to-july-27)
+ - [Phase 3 *(July 27 to August 24)*](#phase-3-july-27-to-august-24)
+ - [Project Conclusion *(August 24 to September 9)*](#project-conclusion-august-24-to-september-9)
 
 ## Community Bonding *(May 4 to June 1)*
 ### 1st week (May 4)
@@ -25,10 +29,17 @@
   - [x] Start working on the Bloom effect (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
 
 ## Phase 1 *(June 1 to June 29)*
+### 5th week (June 1) 👈
   - [x] Create test scenes for Bloom
   - [ ] Improve Bloom performance
   - [ ] Biweekly meeting
   - [ ] Merge the Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
+
+### 6th week (June 8)
+  - 🚧 ...
+
+### 7th week (June 15)
+### 8th week (June 22)
 
 ## Phase 2 *(June 29 to July 27)*
 
