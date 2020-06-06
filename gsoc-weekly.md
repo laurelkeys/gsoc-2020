@@ -30,12 +30,13 @@
 
 ## Phase 1 *(June 1 to June 29)*
 ### 5th week (June 1) 👈
-  - [x] Create test scenes for Bloom
-  - [ ] Improve Bloom performance
-  - [ ] Biweekly meeting
-  - [ ] Merge the Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
+  - [x] Create test scenes for Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
+  - [x] Improve Bloom performance (replaced [Kawase](http://www.daionet.gr.jp/~masa/archives/GDC2003_DSTEAL.ppt ) bloom with [KinoBloom](https://github.com/keijiro/KinoBloom))
 
 ### 6th week (June 8)
+  - [ ] Fix image artifacts in Bloom
+  - [ ] Biweekly meeting
+  - [ ] Merge Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
   - 🚧 ...
 
 ### 7th week (June 15)
