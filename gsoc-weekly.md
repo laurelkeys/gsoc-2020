@@ -34,12 +34,13 @@
   - [x] Improve Bloom performance (replaced [Kawase](http://www.daionet.gr.jp/~masa/archives/GDC2003_DSTEAL.ppt ) bloom with [KinoBloom](https://github.com/keijiro/KinoBloom))
 
 ### 6th week (June 8) 👈
-  - [ ] Fix image artifacts in Bloom (*branch:* [`kinobloom`](https://github.com/laurelkeys/appleseed/tree/kinobloom))
+  - [x] Fix image artifacts in Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/kinobloom))
   - [ ] Biweekly meeting
   - [ ] Merge Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
-  - 🚧 ...
 
 ### 7th week (June 15)
+  - 🚧 ...
+
 ### 8th week (June 22)
 
 ## Phase 2 *(June 29 to July 27)*
