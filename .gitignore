@@ -1,5 +1,8 @@
-.vscode/
-
+*.png
 utils/scenes/
 
-*.png
+# VS Code
+.vscode/
+
+# Python
+__pycache__/

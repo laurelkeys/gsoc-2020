@@ -26,7 +26,7 @@ def main(filepath, new_stage_params, output_folder=None, separator="__"):
     assert os.path.isfile(filepath), f"Invalid {filepath=}"
     tree = ElementTree.parse(filepath)
 
-    vprint(f"Stages:")
+    vprint("stages:")
     for stage in tree.getroot().iter(tag="post_processing_stage"):
         stage_name = stage.get("name")
         vprint(f"- {stage_name}")
@@ -34,7 +34,6 @@ def main(filepath, new_stage_params, output_folder=None, separator="__"):
             for param in stage:
                 if (param_name := param.get("name")) in (new_params := new_stage_params[stage_name]):
                     if (old_value := param.get("value")) != (new_value := to_str(new_params[param_name])):
-                        new_value = str(new_value) if not isinstance(new_value, bool) else str(new_value).lower()
                         vprint(f"  ..replacing {param_name}={old_value} with {param_name}={new_value}")
                         param.set("value", new_value)
 
