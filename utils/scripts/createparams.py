@@ -1,3 +1,14 @@
+
+ITERATIONS      = [5]
+INTENSITY       = [4.0]  # [2.0, 4.0, 8.0]  # [0.0, 0.5, 1.0]
+THRESHOLD       = [0.0, 0.8, 10.0]
+SOFT_THRESHOLD  = [0.0, 0.5, 1.0]
+ANTI_FLICKER    = [
+    # True,   # 13-tap + 9-tap
+    False,  # dual-filtering
+]
+
+
 if __name__ == "__main__":
 
     bloom_params = {
@@ -11,15 +22,15 @@ if __name__ == "__main__":
 
     n_of_test_scenes = 0
 
-    for iterations in [5]:
+    for iterations in ITERATIONS:
         bloom_params["iterations"] = iterations
-        for intensity in [2.0, 4.0, 8.0]:  # [0.0, 0.5, 1.0]
+        for intensity in INTENSITY:
             bloom_params["intensity"] = intensity
-            for threshold in [0.0, 0.8, 10.0]:
+            for threshold in THRESHOLD:
                 bloom_params["threshold"] = threshold
-                for soft_threshold in [0.0, 0.5, 1.0]:
+                for soft_threshold in SOFT_THRESHOLD:
                     bloom_params["soft_threshold"] = soft_threshold
-                    for anti_flicker in [True, False]:
+                    for anti_flicker in ANTI_FLICKER:
                         bloom_params["anti_flicker"] = anti_flicker
                         n_of_test_scenes += 1
                         print(bloom_params)  # TODO capture and forward to setparams.py

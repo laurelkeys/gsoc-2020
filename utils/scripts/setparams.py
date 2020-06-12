@@ -6,23 +6,12 @@ import logging as log
 
 from xml.etree import ElementTree
 
-DEFAULT_STAGE_PARAMS = {
-    "bloom_stage": {
-        "iterations": 5,
-        "intensity": 0.5,
-        "threshold": 0.8,
-        "soft_threshold": 0.5,
-        "anti_flicker": False,
-        # "debug_blur": False,
-    }
-}
-
 
 def to_str(value):
     return str(value) if not isinstance(value, bool) else str(value).lower()
 
 
-def main(filepath, new_stage_params, output_folder=None, separator="__"):
+def set_params(filepath, new_stage_params, output_folder=None, separator="__"):
     assert os.path.isfile(filepath), f"Invalid {filepath=}"
     tree = ElementTree.parse(filepath)
 
@@ -41,23 +30,25 @@ def main(filepath, new_stage_params, output_folder=None, separator="__"):
     output_filepath = (
         filename
         + separator
-        + separator.join([
-            f"{name}-{to_str(value).replace('.', '_')}"
-            for params in new_stage_params.values()
-            for name, value in params.items()
-        ])
+        + separator.join(
+            [
+                f"{name}-{to_str(value).replace('.', '_')}"
+                for params in new_stage_params.values()
+                for name, value in params.items()
+            ]
+        )
         + ".appleseed"
     )
 
     if output_folder is not None:
         output_filepath = os.path.join(output_folder, output_filepath)
-    tree.write(output_filepath)
+    tree.write(output_filepath, encoding="UTF-8", xml_declaration=True)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("filepath", type=str, help="Path to .appleseed project file")
-    parser.add_argument("output-folder", type=str, help="Path to folder where the modified file will be save")
+    parser.add_argument("outputdir", type=str, help="Path to folder where the modified file will be save")
     parser.add_argument("--verbose", "-v", action="store_true")
 
     args = parser.parse_args()
@@ -65,4 +56,8 @@ if __name__ == "__main__":
     global vprint
     vprint = print if args.verbose else lambda *a, **k: None
 
-    main(args.filepath, DEFAULT_STAGE_PARAMS, separator=" ")
+    from newparams import NEW_STAGE_PARAMS_LIST
+
+    for stage_name, new_stage_params_list in NEW_STAGE_PARAMS_LIST.items():
+        for new_stage_params in new_stage_params_list:
+            set_params(args.filepath, {stage_name: new_stage_params}, args.outputdir, separator="__")
