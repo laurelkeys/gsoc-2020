@@ -33,12 +33,15 @@
   - [x] Create test scenes for Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
   - [x] Improve Bloom performance (replaced [Kawase](http://www.daionet.gr.jp/~masa/archives/GDC2003_DSTEAL.ppt ) bloom with [KinoBloom](https://github.com/keijiro/KinoBloom))
 
-### 6th week (June 8) 👈
-  - [x] Fix image artifacts in Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/kinobloom))
+### 6th week (June 8)
+  - [x] Fix image artifacts in Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
+  - [x] Decide which blurring method is going to be used
+  - [x] Start wrapping up Bloom (*first draft PR:* [#2872](https://github.com/appleseedhq/appleseed/pull/2872))
+
+### 7th week (June 15) 👈
+  - [ ] Finish implementing Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
   - [ ] Biweekly meeting
   - [ ] Merge Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
-
-### 7th week (June 15)
   - 🚧 ...
 
 ### 8th week (June 22)
