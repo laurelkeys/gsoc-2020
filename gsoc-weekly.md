@@ -37,14 +37,16 @@
   - [x] Fix image artifacts in Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
   - [x] Decide which blurring method is going to be used
   - [x] Start wrapping up Bloom (*first draft PR:* [#2872](https://github.com/appleseedhq/appleseed/pull/2872))
+  - [x] Create scripts for quickly generating and rendering test scenes
 
 ### 7th week (June 15) 👈
   - [ ] Finish implementing Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
-  - [ ] Biweekly meeting
+  - [x] Add profiling (*branch:* [`bloom-opt`](https://github.com/laurelkeys/appleseed/tree/bloom-opt))
+  - [x] Biweekly meeting
   - [ ] Merge Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
-  - 🚧 ...
 
 ### 8th week (June 22)
+  - 🚧 ...
 
 ## Phase 2 *(June 29 to July 27)*
 
