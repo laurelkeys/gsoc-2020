@@ -1,10 +1,10 @@
 
-ITERATIONS      = [5]
-INTENSITY       = [4.0]  # [2.0, 4.0, 8.0]  # [0.0, 0.5, 1.0]
-THRESHOLD       = [0.0, 0.8, 10.0]
-SOFT_THRESHOLD  = [0.0, 0.5, 1.0]
+ITERATIONS      = [1, 3, 5]
+INTENSITY       = [0.5, 1.0, 2.0]  # [2.0, 4.0, 8.0]  # [0.0, 0.5, 1.0]
+THRESHOLD       = [0.8]
+SOFT_THRESHOLD  = [0.2, 0.8]  # [0.0, 0.5, 1.0]
 ANTI_FLICKER    = [
-    # True,   # 13-tap + 9-tap
+    True,   # 13-tap + 9-tap
     False,  # dual-filtering
 ]
 
@@ -28,7 +28,7 @@ if __name__ == "__main__":
             bloom_params["intensity"] = intensity
             for threshold in THRESHOLD:
                 bloom_params["threshold"] = threshold
-                for soft_threshold in SOFT_THRESHOLD:
+                for soft_threshold in (SOFT_THRESHOLD if threshold != 0 else [0.0]):
                     bloom_params["soft_threshold"] = soft_threshold
                     for anti_flicker in ANTI_FLICKER:
                         bloom_params["anti_flicker"] = anti_flicker

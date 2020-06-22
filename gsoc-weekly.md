@@ -39,16 +39,26 @@
   - [x] Start wrapping up Bloom (*first draft PR:* [#2872](https://github.com/appleseedhq/appleseed/pull/2872))
   - [x] Create scripts for quickly generating and rendering test scenes
 
-### 7th week (June 15) 👈
-  - [ ] Finish implementing Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
+### 7th week (June 15)
+  - [x] Simplify multithreaded effect appliers (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
   - [x] Add profiling (*branch:* [`bloom-opt`](https://github.com/laurelkeys/appleseed/tree/bloom-opt))
+  - [x] Improve Bloom performance (more than halved stage time)
   - [x] Biweekly meeting
-  - [ ] Merge Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
+  - [x] Merge Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
 
-### 8th week (June 22)
+### 8th week (June 22) 👈
+  - [ ] Update Bloom test scenes
+  - [ ] Finish implementing Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
   - 🚧 ...
 
 ## Phase 2 *(June 29 to July 27)*
+### 9th week (June 29)
+  - 🏁 GSoC mentor/student evaluations *(June 29 - July 3)*
+  - 🚧 ...
+
+### 10th week (July 6)
+### 11th week (July 13)
+### 12th week (July 20)
 
 ## Phase 3 *(July 27 to August 24)*
 
