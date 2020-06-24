@@ -26,29 +26,30 @@
   - [x] Biweekly meeting
 
 ### 4th week (May 25)
-  - [x] Start working on the Bloom effect (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
+  - [x] Start working on the Bloom effect (*branch:* [`bloom/unopt`](https://github.com/laurelkeys/appleseed/tree/bloom/unopt))
 
 ## Phase 1 *(June 1 to June 29)*
 ### 5th week (June 1)
-  - [x] Create test scenes for Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
-  - [x] Improve Bloom performance (replaced [Kawase](http://www.daionet.gr.jp/~masa/archives/GDC2003_DSTEAL.ppt ) bloom with [KinoBloom](https://github.com/keijiro/KinoBloom))
+  - [x] Create test scenes for Bloom (*branch:* [`bloom/unopt`](https://github.com/laurelkeys/appleseed/tree/bloom/unopt))
+  - [x] Improve Bloom performance (replaced [Kawase](http://www.daionet.gr.jp/~masa/archives/GDC2003_DSTEAL.ppt) bloom with [KinoBloom](https://github.com/keijiro/KinoBloom))
 
 ### 6th week (June 8)
-  - [x] Fix image artifacts in Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
+  - [x] Fix image artifacts in Bloom (*branch:* [`bloom/unopt`](https://github.com/laurelkeys/appleseed/tree/bloom/unopt))
   - [x] Decide which blurring method is going to be used
   - [x] Start wrapping up Bloom (*first draft PR:* [#2872](https://github.com/appleseedhq/appleseed/pull/2872))
   - [x] Create scripts for quickly generating and rendering test scenes
 
 ### 7th week (June 15)
   - [x] Simplify multithreaded effect appliers (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
-  - [x] Add profiling (*branch:* [`bloom-opt`](https://github.com/laurelkeys/appleseed/tree/bloom-opt))
+  - [x] Add profiling (*branch:* [`bloom/opt`](https://github.com/laurelkeys/appleseed/tree/bloom/opt))
   - [x] Improve Bloom performance (more than halved stage time)
   - [x] Biweekly meeting
   - [x] Merge Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
 
 ### 8th week (June 22) 👈
-  - [ ] Update Bloom test scenes
-  - [ ] Finish implementing Bloom (*branch:* [`bloom`](https://github.com/laurelkeys/appleseed/tree/bloom))
+  - [x] Update Bloom test scenes
+  - [x] Finish implementing Bloom (*branch:* [`bloom/opt`](https://github.com/laurelkeys/appleseed/tree/bloom/opt))
+  - [ ] Merge Bloom (*PR:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875))
   - 🚧 ...
 
 ## Phase 2 *(June 29 to July 27)*

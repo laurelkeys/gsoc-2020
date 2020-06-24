@@ -7,9 +7,9 @@ For a more comprehensive list, see the [project proposal](gsoc-proposal.md#Imple
   - Keijiro Takahashi's [KinoVignette](https://github.com/keijiro/KinoVignette)
   - Unity Post-Processing Stack v2's [Classic Vignette](https://github.com/Unity-Technologies/PostProcessing/blob/v2/Documentation~/Vignette.md#classic)
 ## Bloom
-  - EEVEE's [Bloom shader](https://github.com/blender/blender/blob/master/source/blender/draw/engines/eevee/eevee_bloom.c) ([.glsl](https://github.com/blender/blender/blob/master/source/blender/draw/engines/eevee/shaders/effect_bloom_frag.glsl))
   - Keijiro Takahashi's [KinoBloom](https://github.com/keijiro/KinoBloom)
   - Unity Post-Processing Stack v2's [Bloom](https://github.com/Unity-Technologies/PostProcessing/blob/v2/Documentation~/Bloom.md)
+  - Marius Bjørge's ["Dual filtering"](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/siggraph2015_2D00_mmg_2D00_marius_2D00_notes.pdf) sampling method for blurring
 ## Tonemapping
   - Tizian Zeltner's [Tone Mapper](https://github.com/tizian/tonemapper)
   - Romain Guy's [Tonemap operators ShaderToy](https://www.shadertoy.com/view/WdjSW3)
