@@ -2,14 +2,14 @@
 
 ## Deliverables (WIP 🚧)
 - [ ] Post-Processing Effects
-  - [ ] Vignetting
+  - [x] Vignetting
   - [ ] Tonemapping
-  - [ ] Bloom
+  - [x] Bloom
   - [ ] Chromatic Aberration
 - [ ] Test Suite
-  - [ ] Vignetting
+  - [x] Vignetting
   - [ ] Tonemapping
-  - [ ] Bloom
+  - [x] Bloom
   - [ ] Chromatic Aberration
 - [ ] Eye Candy Scenes
 - [ ] Apply Effects to Paused (`Ctrl-F5`) Renderings
