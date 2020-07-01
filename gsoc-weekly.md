@@ -1,8 +1,8 @@
 # Weekly To-Dos
 
  - [Community Bonding *(May 4 to June 1)*](#community-bonding-may-4-to-june-1)
- - [Phase 1 *(June 1 to June 29)*](#phase-1-june-1-to-june-29) 👈
- - [Phase 2 *(June 29 to July 27)*](#phase-2-june-29-to-july-27)
+ - [Phase 1 *(June 1 to June 29)*](#phase-1-june-1-to-june-29)
+ - [Phase 2 *(June 29 to July 27)*](#phase-2-june-29-to-july-27) 👈
  - [Phase 3 *(July 27 to August 24)*](#phase-3-july-27-to-august-24)
  - [Project Conclusion *(August 24 to September 9)*](#project-conclusion-august-24-to-september-9)
 
@@ -46,18 +46,22 @@
   - [x] Biweekly meeting
   - [x] Merge Vignette refactoring (*PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
 
-### 8th week (June 22) 👈
+### 8th week (June 22)
   - [x] Update Bloom test scenes
   - [x] Finish implementing Bloom (*branch:* [`bloom/opt`](https://github.com/laurelkeys/appleseed/tree/bloom/opt))
-  - [ ] Merge Bloom (*PR:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875))
-  - 🚧 ...
+  - [x] Submit Bloom (*PR:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875))
 
 ## Phase 2 *(June 29 to July 27)*
-### 9th week (June 29)
+### 9th week (June 29) 👈
   - 🏁 GSoC mentor/student evaluations *(June 29 - July 3)*
-  - 🚧 ...
+  - [x] Fix false colors bug on appleseed.studio (*PR:* [#2877](https://github.com/appleseedhq/appleseed/pull/2877))
+  - [x] Preview post-processing effects when rendering is stopped (*branch:* [`fxs/preview`](https://github.com/laurelkeys/appleseed/tree/fxs/preview))
+  - [ ] Start Tone Mapping implementation
 
 ### 10th week (July 6)
+  - [ ] Continue Tone Mapping implementation
+  - 🚧 ...
+
 ### 11th week (July 13)
 ### 12th week (July 20)
 
