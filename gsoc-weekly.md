@@ -52,14 +52,16 @@
   - [x] Submit Bloom (*PR:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875))
 
 ## Phase 2 *(June 29 to July 27)*
-### 9th week (June 29) 👈
+### 9th week (June 29)
   - 🏁 GSoC mentor/student evaluations *(June 29 - July 3)*
-  - [x] Fix false colors bug on appleseed.studio (*PR:* [#2877](https://github.com/appleseedhq/appleseed/pull/2877))
+  - [x] Fix false colors being applied twice (*PR:* [#2877](https://github.com/appleseedhq/appleseed/pull/2877))
+  - [x] Fix false colors bug with final render (*PR:* [#2880](https://github.com/appleseedhq/appleseed/pull/2880))
   - [x] Preview post-processing effects when rendering is stopped (*branch:* [`fxs/preview`](https://github.com/laurelkeys/appleseed/tree/fxs/preview))
-  - [ ] Start Tone Mapping implementation
+  - [x] Start Tone Mapping implementation
 
-### 10th week (July 6)
+### 10th week (July 6) 👈
   - [ ] Continue Tone Mapping implementation
+  - [ ] Biweekly meeting
   - 🚧 ...
 
 ### 11th week (July 13)
