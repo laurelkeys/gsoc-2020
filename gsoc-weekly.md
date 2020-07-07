@@ -57,12 +57,12 @@
   - [x] Fix false colors being applied twice (*PR:* [#2877](https://github.com/appleseedhq/appleseed/pull/2877))
   - [x] Fix false colors bug with final render (*PR:* [#2880](https://github.com/appleseedhq/appleseed/pull/2880))
   - [x] Preview post-processing effects when rendering is stopped (*branch:* [`fxs/preview`](https://github.com/laurelkeys/appleseed/tree/fxs/preview))
-  - [x] Start Tone Mapping implementation
+  - [x] Start Tone Mapping implementation (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
 
 ### 10th week (July 6) 👈
-  - [ ] Continue Tone Mapping implementation
-  - [ ] Biweekly meeting
-  - 🚧 ...
+  - [ ] Continue Tone Mapping implementation (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
+  - [ ] Read more on tone mapping / HDRi / gamma / color management / etc.
+  - [x] Biweekly meeting
 
 ### 11th week (July 13)
 ### 12th week (July 20)
