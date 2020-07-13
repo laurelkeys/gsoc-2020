@@ -59,13 +59,19 @@
   - [x] Preview post-processing effects when rendering is stopped (*branch:* [`fxs/preview`](https://github.com/laurelkeys/appleseed/tree/fxs/preview))
   - [x] Start Tone Mapping implementation (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
 
-### 10th week (July 6) 👈
-  - [ ] Continue Tone Mapping implementation (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
-  - [ ] Read more on tone mapping / HDRi / gamma / color management / etc.
+### 10th week (July 6)
+  - [x] Continue Tone Mapping implementation (*bra  nch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
+  - [x] Read more on tone mapping / HDRi / gamma / color management / etc.
   - [x] Biweekly meeting
+  - [x] Address the first reviews of Bloom (*PR:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875))
+  - [x] Further explain the two bugs found in `.studio` (*PRs:* [#2877](https://github.com/appleseedhq/appleseed/pull/2877), [#2880](https://github.com/appleseedhq/appleseed/pull/2880))
 
-### 11th week (July 13)
+### 11th week (July 13) 👈
+  - [x] Create a post on the [appleseed Users Forum](https://forum.appleseedhq.net/) about Bloom ([*link here*](https://forum.appleseedhq.net/t/bloom-as-a-new-post-processing-effect/1027/2))
+  - [ ] Continue work on Tone Mapping (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
+
 ### 12th week (July 20)
+  - 🚧 ...
 
 ## Phase 3 *(July 27 to August 24)*
 
