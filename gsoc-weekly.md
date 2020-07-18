@@ -68,9 +68,12 @@
 
 ### 11th week (July 13) 👈
   - [x] Create a post on the [appleseed Users Forum](https://forum.appleseedhq.net/) about Bloom ([*link here*](https://forum.appleseedhq.net/t/bloom-as-a-new-post-processing-effect/1027/2))
-  - [ ] Continue work on Tone Mapping (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
+  - [x] Update Bloom after more reviews (*PR:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875))
+  - [x] Continue work on Tone Mapping (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
+  - [ ] Create test scenes for Tone Mapping
 
 ### 12th week (July 20)
+  - [ ] Wrap up Tone Mapping (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
   - 🚧 ...
 
 ## Phase 3 *(July 27 to August 24)*
