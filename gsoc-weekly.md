@@ -2,8 +2,8 @@
 
  - [Community Bonding *(May 4 to June 1)*](#community-bonding-may-4-to-june-1)
  - [Phase 1 *(June 1 to June 29)*](#phase-1-june-1-to-june-29)
- - [Phase 2 *(June 29 to July 27)*](#phase-2-june-29-to-july-27) 👈
- - [Phase 3 *(July 27 to August 24)*](#phase-3-july-27-to-august-24)
+ - [Phase 2 *(June 29 to July 27)*](#phase-2-june-29-to-july-27)
+ - [Phase 3 *(July 27 to August 24)*](#phase-3-july-27-to-august-24) 👈
  - [Project Conclusion *(August 24 to September 9)*](#project-conclusion-august-24-to-september-9)
 
 ## Community Bonding *(May 4 to June 1)*
@@ -66,16 +66,25 @@
   - [x] Address the first reviews of Bloom (*PR:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875))
   - [x] Further explain the two bugs found in `.studio` (*PRs:* [#2877](https://github.com/appleseedhq/appleseed/pull/2877), [#2880](https://github.com/appleseedhq/appleseed/pull/2880))
 
-### 11th week (July 13) 👈
+### 11th week (July 13)
   - [x] Create a post on the [appleseed Users Forum](https://forum.appleseedhq.net/) about Bloom ([*link here*](https://forum.appleseedhq.net/t/bloom-as-a-new-post-processing-effect/1027/2))
   - [x] Update Bloom after more reviews (*PR:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875))
   - [x] Continue work on Tone Mapping (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
   - [ ] Create test scenes for Tone Mapping
 
 ### 12th week (July 20)
-  - [ ] Wrap up Tone Mapping (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
-  - 🚧 ...
+  - [x] Wrap up Tone Mapping to focus on creating a PR (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
+  - [x] Share a new "test build" with Tone Mapping
 
 ## Phase 3 *(July 27 to August 24)*
+### 13th week (July 27) 👈
+  - 🏁 GSoC mentor/student evaluations *(July 27 - 31)*
+  - [ ] Biweekly meeting
+  - [ ] Create a PR for Tone Mapping (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
+  - 🚧 ...
+
+### 14th week (August 3)
+### 15th week (August 10)
+### 16th week (August 17)
 
 ## Project Conclusion *(August 24 to September 9)*
