@@ -12,9 +12,7 @@ For a more comprehensive list, see the [project proposal](gsoc-proposal.md#Imple
   - Marius Bjørge's ["Dual filtering"](https://community.arm.com/cfs-file/__key/communityserver-blogs-components-weblogfiles/00-00-00-20-66/siggraph2015_2D00_mmg_2D00_marius_2D00_notes.pdf) sampling method for blurring
 ## Tonemapping
   - Tizian Zeltner's [Tone Mapper](https://github.com/tizian/tonemapper)
-  - Romain Guy's [Tonemap operators ShaderToy](https://www.shadertoy.com/view/WdjSW3)
-  - 🚧 ...
-  <!-- - https://github.com/meshula/tonemapper -->
-  <!-- - https://64.github.io/tonemapping/ -->
+  - Matt Taylor's ["Tone Mapping"](https://64.github.io/tonemapping/)
+  - John Hable's ["Filmic Tonemapping with Piecewise Power Curves"](http://filmicworlds.com/blog/filmic-tonemapping-with-piecewise-power-curves/)
 ## Chromatic Aberration
   - 🚧 ...
