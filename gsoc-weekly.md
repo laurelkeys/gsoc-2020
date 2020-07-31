@@ -79,11 +79,14 @@
 ## Phase 3 *(July 27 to August 24)*
 ### 13th week (July 27) 👈
   - 🏁 GSoC mentor/student evaluations *(July 27 - 31)*
-  - [ ] Biweekly meeting
-  - [ ] Create a PR for Tone Mapping (*branch:* [`tonemap`](https://github.com/laurelkeys/appleseed/tree/tonemap))
-  - 🚧 ...
+  - [x] Biweekly meeting
+  - [x] Create a PR for Tone Mapping (*PR:* [#2884](https://github.com/appleseedhq/appleseed/pull/2884))
+  - [x] Work on improving the user experience when testing post-processing stages (*branch:* [`fxs/reload`](https://github.com/laurelkeys/appleseed/tree/fxs/reload))
 
 ### 14th week (August 3)
+  - [ ] Preview effects as their parameters are changed in `.studio` (*branch:* [`fxs/reload`](https://github.com/laurelkeys/appleseed/tree/fxs/reload))
+  - 🚧 ...
+
 ### 15th week (August 10)
 ### 16th week (August 17)
 
