@@ -3,7 +3,7 @@
 ## Deliverables (WIP 🚧)
 - [ ] Post-Processing Effects
   - [x] Vignetting
-  - [ ] Tonemapping
+  - [x] Tonemapping
   - [x] Bloom
   - [ ] Chromatic Aberration
 - [ ] Test Suite

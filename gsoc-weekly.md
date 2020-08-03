@@ -77,17 +77,20 @@
   - [x] Share a new "test build" with Tone Mapping
 
 ## Phase 3 *(July 27 to August 24)*
-### 13th week (July 27) 👈
+### 13th week (July 27)
   - 🏁 GSoC mentor/student evaluations *(July 27 - 31)*
   - [x] Biweekly meeting
   - [x] Create a PR for Tone Mapping (*PR:* [#2884](https://github.com/appleseedhq/appleseed/pull/2884))
   - [x] Work on improving the user experience when testing post-processing stages (*branch:* [`fxs/reload`](https://github.com/laurelkeys/appleseed/tree/fxs/reload))
 
-### 14th week (August 3)
+### 14th week (August 3) 👈
   - [ ] Preview effects as their parameters are changed in `.studio` (*branch:* [`fxs/reload`](https://github.com/laurelkeys/appleseed/tree/fxs/reload))
-  - 🚧 ...
+  - [ ] Start implementing Chromatic Aberration
 
 ### 15th week (August 10)
+  - [ ] Add test scenes and documentation to finish Chromatic Aberration
+  - 🚧 ...
+
 ### 16th week (August 17)
 
 ## Project Conclusion *(August 24 to September 9)*

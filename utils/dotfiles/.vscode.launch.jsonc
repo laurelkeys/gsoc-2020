@@ -15,11 +15,11 @@
             "environment": [
                 {
                     "name": "PATH",
-                    "value": "D:\\dev\\Appleseed\\dependencies\\qt\\qt-5.12.6-dynamic-msvc2017-x86_64\\bin;C:\\Users\\tiago\\AppData\\Local\\Programs\\Python\\Python27;${env:PATH}"
+                    "value": "D:\\dev\\Appleseed\\dependencies\\qt\\qt-5.12.6-dynamic-msvc2017-x86_64\\bin;D:\\Programs\\Python\\Python27;${env:PATH}"
                 },
                 {
                     "name": "PYTHONHOME",
-                    "value": "C:\\Users\\tiago\\AppData\\Local\\Programs\\Python\\Python27"
+                    "value": "D:\\Programs\\Python\\Python27"
                 },
                 {
                     "name": "PYTHONPATH",
@@ -32,19 +32,27 @@
             "name": "(Windows) Launch CLI",
             "type": "cppvsdbg",
             "request": "launch",
+
             "program": "${workspaceFolder}\\sandbox\\bin\\vc141\\${input:buildConfiguration}\\appleseed.cli.exe",
             "args": [
                 // NOTE change the following values:
-                "--threads", "4",
-                "--resolution", "32", "32",
-                "05 - large bars.appleseed",
-                "--output", "out (debug).png"
+                "--resolution",
+                "32",
+                "32",
+
+                "--threads",
+                "4",
+
+                "--output",
+                "out.png",
+                "05 - large bars.appleseed"
             ],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}\\sandbox\\tests\\test scenes\\bloom",
+            "cwd": "${workspaceFolder}\\sandbox\\tests\\test scenes\\${input:testFolder}",
             "externalConsole": false
         }
     ],
+    // See https://github.com/appleseedhq/appleseed/wiki/Build-Configurations
     "inputs": [
         {
             "id": "buildConfiguration",
@@ -57,7 +65,16 @@
                 "Profile"
             ],
             "description": "Build configuration"
-            // See https://github.com/appleseedhq/appleseed/wiki/Build-Configurations
+        },
+        {
+            "id": "testFolder",
+            "type": "pickString",
+            "options": [
+                "bloom",
+                "tonemap",
+                "vignette"
+            ],
+            "description": "Test scenes folder"
         }
     ]
 }

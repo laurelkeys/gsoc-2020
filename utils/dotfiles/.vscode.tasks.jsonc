@@ -9,14 +9,13 @@
             "options": {
                 "cwd": "${workspaceFolder}\\scripts\\runtestsuite"
             },
-            "command": "C:\\Users\\tiago\\AppData\\Local\\Programs\\Python\\Python27\\python.exe",
+            "command": "D:\\Programs\\Python\\Python27\\python.exe",
             "args": [
                 "runtestsuite.py",
                 "-t",
                 "${workspaceFolder}\\sandbox\\bin\\vc141\\${input:buildType}\\appleseed.cli.exe",
                 "${workspaceFolder}\\sandbox\\tests\\test scenes\\${input:testFolder}"
             ],
-            "group": "test",
             "problemMatcher": []
         },
         {
@@ -25,16 +24,23 @@
             "options": {
                 "cwd": "${workspaceFolder}\\sandbox\\tests\\test scenes\\${input:testFolder}",
                 "env": {
-                    "PYTHON_ROOT": "C:\\Users\\tiago\\AppData\\Local\\Programs\\Python"
+                    "PYTHON_ROOT": "D:\\Programs\\Python"
                 }
             },
             "command": "${workspaceFolder}\\sandbox\\bin\\vc141\\${input:buildType}\\appleseed.cli.exe",
             "args": [
                 // NOTE change the following values:
-                "--threads", "4",
-                "--resolution", "1200", "400",
-                "\"./02 - four spheres.appleseed\"",
-                "--output", "\"out.png\""
+                "--resolution",
+                "1024",
+                "1024",
+
+                "--threads",
+                "4",
+
+                "--output",
+                "\"out.png\"",
+
+                "\"09 - railings.appleseed\""
             ],
             "group": {
                 "kind": "test",
@@ -48,7 +54,7 @@
             "options": {
                 "cwd": "${workspaceFolder}\\sandbox",
                 "env": {
-                    "PYTHONHOME": "C:\\Users\\tiago\\AppData\\Local\\Programs\\Python\\Python27",
+                    "PYTHONHOME": "D:\\Programs\\Python\\Python27",
                     "PATH": "D:\\dev\\Appleseed\\dependencies\\qt\\qt-5.12.6-dynamic-msvc2017-x86_64\\bin;%PYTHONHOME%;${env:PATH}",
                     "PYTHONPATH": "D:\\dev\\Appleseed\\appleseed\\sandbox\\lib\\vc141\\${input:buildType}\\python"
                 }
@@ -57,7 +63,6 @@
             "args": [
                 "${workspaceFolder}\\sandbox\\bin\\vc141\\${input:buildType}\\appleseed.studio.exe"
             ],
-            "group": "none",
             "problemMatcher": []
         },
         {
@@ -71,6 +76,14 @@
                 "appleseed.sln"
             ],
             "group": "none",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
             "problemMatcher": []
         },
         {
@@ -80,7 +93,7 @@
                 "cwd": "${workspaceFolder}\\build",
                 "env": {
                     "DEPS_ROOT": "D:\\dev\\Appleseed\\dependencies",
-                    "PYTHON_ROOT": "C:\\Users\\tiago\\AppData\\Local\\Programs\\Python"
+                    "PYTHON_ROOT": "D:\\Programs\\Python"
                 }
             },
             "command": "cmake",
@@ -108,7 +121,6 @@
                 ".."
             ],
             "group": "build",
-            "problemMatcher": [],
             "presentation": {
                 "echo": true,
                 "reveal": "always",
@@ -116,7 +128,8 @@
                 "panel": "dedicated",
                 "showReuseMessage": true,
                 "clear": false
-            }
+            },
+            "problemMatcher": []
         }
     ],
     "inputs": [
@@ -126,17 +139,19 @@
             "default": "Release",
             "options": [
                 "Release",
-                "Debug"
+                "Debug",
+                "Ship",
+                "Profile"
             ],
-            "description": "Project build type"
+            "description": "CMake build type"
         },
         {
             "id": "testFolder",
             "type": "pickString",
-            "default": "vignette",
             "options": [
-                "vignette",
-                "bloom"
+                "bloom",
+                "tonemap",
+                "vignette"
             ],
             "description": "Test scenes folder"
         }
