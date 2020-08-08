@@ -83,12 +83,13 @@
   - [x] Create a PR for Tone Mapping (*PR:* [#2884](https://github.com/appleseedhq/appleseed/pull/2884))
   - [x] Work on improving the user experience when testing post-processing stages (*branch:* [`fxs/reload`](https://github.com/laurelkeys/appleseed/tree/fxs/reload))
 
-### 14th week (August 3) 👈
-  - [ ] Preview effects as their parameters are changed in `.studio` (*branch:* [`fxs/reload`](https://github.com/laurelkeys/appleseed/tree/fxs/reload))
-  - [ ] Start implementing Chromatic Aberration
+### 14th week (August 3)
+  - [x] Preview effects as their parameters are changed in `.studio` (*PR:* [`#2885`](https://github.com/appleseedhq/appleseed/pull/2885))
+  - [x] Start implementing Chromatic Aberration
 
-### 15th week (August 10)
+### 15th week (August 10) 👈
   - [ ] Add test scenes and documentation to finish Chromatic Aberration
+  - [ ] Work on the final project report
   - 🚧 ...
 
 ### 16th week (August 17)
