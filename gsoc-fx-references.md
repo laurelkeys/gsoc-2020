@@ -1,6 +1,6 @@
 # Implementation References
 
-Below are listed the main references used when implementating the post-processing effect algorithms.  
+Below are listed the main references used when implementating the post-processing effect algorithms.
 For a more comprehensive list, see the [project proposal](gsoc-proposal.md#Implementation-References).
 
 ## Vignette
@@ -15,4 +15,5 @@ For a more comprehensive list, see the [project proposal](gsoc-proposal.md#Imple
   - Matt Taylor's ["Tone Mapping"](https://64.github.io/tonemapping/)
   - John Hable's ["Filmic Tonemapping with Piecewise Power Curves"](http://filmicworlds.com/blog/filmic-tonemapping-with-piecewise-power-curves/)
 ## Chromatic Aberration
-  - 🚧 ...
+  - Mikkel Gjoel's [ShaderToy](https://www.shadertoy.com/view/XssGz8)
+  - [Playdead](https://playdead.com/)'s GDC2016 presentation ["The Rendering of INSIDE"](https://www.youtube.com/watch?v=RdN06E6Xn9E&feature=youtu.be&t=428) ([slides 19-20](http://loopit.dk/rendering_inside.pdf))

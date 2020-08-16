@@ -1,16 +1,16 @@
 # New Post-Processing Stages
 
 ## Deliverables (WIP 🚧)
-- [ ] Post-Processing Effects
+- [x] Post-Processing Effects
   - [x] Vignetting
   - [x] Tonemapping
   - [x] Bloom
-  - [ ] Chromatic Aberration
-- [ ] Test Suite
+  - [x] Chromatic Aberration
+- [x] Test Suite
   - [x] Vignetting
-  - [ ] Tonemapping
+  - [x] Tonemapping
   - [x] Bloom
-  - [ ] Chromatic Aberration
+  - [x] Chromatic Aberration
 - [ ] Eye Candy Scenes
 - [x] Apply Effects to Paused (`Ctrl-F5`) Renderings
 - [x] Apply Effects to Stopped (`Shift-F5`) Renderings

@@ -85,13 +85,17 @@
 
 ### 14th week (August 3)
   - [x] Preview effects as their parameters are changed in `.studio` (*PR:* [`#2885`](https://github.com/appleseedhq/appleseed/pull/2885))
-  - [x] Start implementing Chromatic Aberration
+  - [x] Start implementing Chromatic Aberration (*branch:* [`chromatic-aberration`](https://github.com/laurelkeys/appleseed/tree/chromatic-aberration))
 
-### 15th week (August 10) 👈
-  - [ ] Add test scenes and documentation to finish Chromatic Aberration
+### 15th week (August 10)
+  - [x] Add test scenes and documentation to Chromatic Aberration (*branch:* [`chromatic-aberration`](https://github.com/laurelkeys/appleseed/tree/chromatic-aberration))
+  - [x] Finish implementing Chromatic Aberration (*PR:* [`#2887`](https://github.com/appleseedhq/appleseed/pull/2887))
+  - [x] Final polishes (i.e. testing and minor fixes)
+  - [x] Work on the final project report
+
+### 16th week (August 17) 👈
+  - [ ] Final polishes (i.e. testing and minor fixes)
   - [ ] Work on the final project report
-  - 🚧 ...
-
-### 16th week (August 17)
+  - [ ] Create an "eye-candy" scene
 
 ## Project Conclusion *(August 24 to September 9)*
