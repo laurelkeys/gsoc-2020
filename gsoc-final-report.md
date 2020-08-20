@@ -1,0 +1,125 @@
+# Google Summer of Code 2020 - appleseed - Final Report
+
+🚧 Work in Progress 🚧
+<!-- https://developers.google.com/open-source/gsoc/help/work-product -->
+<!--
+    In brief: The target of the link should contain a short description of what work was done, what code got merged, what
+    code didn't get merged, and what's left to do. The best examples of this we saw in past years were "final reports" that
+    made it easy to find the code, summarized the current state of the project, and enumerated challenges and learnings.
+ -->
+
+## New Post-Processing Stages
+This year I was really excited to have been selected by [appleseed](https://appleseedhq.net/) -- an open source rendering engine designed for animation and visual effects -- to participate in [Google Summer of Code 2020](https://summerofcode.withgoogle.com/projects/#5361208732942336) (GSoC).
+
+[My project focused on](https://github.com/laurelkeys/gsoc-2020/blob/master/gsoc-proposal.md#synopsis) extending appleseed's stack of post-processing stages -- which previously consisted of only two: a Render Stamp, to add text information, and a Color Map stage for visualizing relative luminance -- with a good number of high-quality post-processing effects, aimed towards artists.
+
+I set out to implement four new post-processing stages -- [Vignette](https://en.wikipedia.org/wiki/Vignetting), [Bloom](https://en.wikipedia.org/wiki/Bloom_(shader_effect)), [Tone Map](https://en.wikipedia.org/wiki/Tone_mapping), and [Chromatic Aberration](https://en.wikipedia.org/wiki/Chromatic_aberration) -- alongside improvements to [appleseed.studio](https://appleseedhq.net/docs/appleseed.studio.html), appleseed's standalone GUI lookdev application.
+
+## Summary
+Pior to the beginning of GSoC, I started working on some small issues to get to know the project, and interacting with the community made me excited to work on appleseed. This led to my first notable contribution at the end of March, [introducing a new vignette effect](https://github.com/appleseedhq/appleseed/pull/2807) (although the implementation was quite straight-forward and not optimized).
+
+Since I had already made some contributions to appleseed, during the [Community Bonding period](https://google.github.io/gsocguides/student/how-gsoc-works) I focused on writing a [new abstraction layer for post-processing stages](https://github.com/appleseedhq/appleseed/pull/2865), on top of which I would refactor the vignette effect I had implemented, and also build the new, more complex, effects.
+
+My aim with it was twofold:
+
+1. To make it really simple to separate the actual *effect algorithm* -- i.e. what / how to process the image -- from its execution schedule, and from exposing parameters to the user; and
+
+2. To seamlessly handle concurrency -- for effects that allow it -- by leaveraging appleseed's job system to run the effect on smaller portions of the image, in parallel, given the number of available threads.
+
+I successfully finished it at the end of May, and after some really insightful suggestions from [François Beaune](https://github.com/dictoon) and [Kevin Mason](https://github.com/oktomus) to improve its simplicity, we [got it merged in early June](https://github.com/appleseedhq/appleseed/pull/2865).
+
+Thereon, I implemented the remaining effects using this "effects abstraction" I created, starting with [bloom](https://github.com/appleseedhq/appleseed/pull/2875) -- which was the most challenging one, and required a lot of testing, comparisons between different implementation trade-offs and profiling (all of which you can [read more about on a post I made to the appleseed Users Forum](https://forum.appleseedhq.net/t/bloom-as-a-new-post-processing-effect/1027)) -- and then moving on to [tone mapping](https://github.com/appleseedhq/appleseed/pull/2884) and [chromatic aberration](https://github.com/appleseedhq/appleseed/pull/2887).
+
+Along the way, I also came across [some](https://github.com/appleseedhq/appleseed/pull/2877) [bugs](https://github.com/appleseedhq/appleseed/pull/2880) on appleseed.studio -- while testing the post effects -- and worked on [enhancing effects preview to improve the user experience](https://github.com/appleseedhq/appleseed/pull/2885) (which was only possible after a rendering finished, adding delays to the artistic process of iteratively testing changes).
+
+These changes, however, are still pending review. Though, once a new release of appleseed ships with these brand-new effects, artists should be able to quickly preview what their scenes would look like in post -- without having to leave appleseed.studio -- and to easily tweak stage parameters while seeing the effect they have live.
+
+## The Code
+
+### Overview
+
+> 🟣 *Merged:* [#2791](https://github.com/appleseedhq/appleseed/pull/2791)\*, [#2785](https://github.com/appleseedhq/appleseed/pull/2785)\*, [#2807](https://github.com/appleseedhq/appleseed/pull/2807)\*, [#2806](https://github.com/appleseedhq/appleseed/pull/2806)\*, [#2855](https://github.com/appleseedhq/appleseed/pull/2855)\*, [#2865](https://github.com/appleseedhq/appleseed/pull/2865)
+>
+> 🟢 *Open:* [#2875](https://github.com/appleseedhq/appleseed/pull/2875), [#2877](https://github.com/appleseedhq/appleseed/pull/2877), [#2880](https://github.com/appleseedhq/appleseed/pull/2880), [#2884](https://github.com/appleseedhq/appleseed/pull/2884), [#2887](https://github.com/appleseedhq/appleseed/pull/2887)
+>
+> ⚫ *Draft:* [#2885](https://github.com/appleseedhq/appleseed/pull/2885)
+>
+> \* contributions before the official GSoC start date
+
+<details>
+<summary>Full Pull Requests Timeline (<i>click to expand</i>)</summary>
+<ul>
+    <li>March*</li>
+    <ul>
+        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2791">#2791</a>] Add Google AI's Turbo rainbow colormap</li>
+        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2785">#2785</a>] Tile highlights are now colored</li>
+        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2807">#2807</a>] Add Vignette post-processing stage</li>
+        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2806">#2806</a>] Ignore incandescence color in black-body mode</li>
+    </ul>
+    <li>April*</li>
+    <ul>
+        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2855">#2855</a>] Fix double slider regression</li>
+    </ul>
+    <li>June</li>
+    <ul>
+        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2865">#2865</a>] Refactor the vignette post-processing stage</li>
+        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2875">#2875</a>] Add Bloom post-processing stage</li>
+        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2877">#2877</a>] Fix Shift+F5 causing False Colors to be applied twice</li>
+    </ul>
+    <li>July</li>
+    <ul>
+        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2880">#2880</a>] Fix false colors not being applied to all tiles on a final render</li>
+        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2884">#2884</a>] Add Tone Map post-processing stage</li>
+    </ul>
+    <li>August</li>
+    <ul>
+        <li>[Draft  <a href="https://github.com/appleseedhq/appleseed/pull/2885">#2885</a>] Preview post-processing stage changes in appleseed.studio</li>
+        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2887">#2887</a>] Add Chromatic Aberration post-processing stage</li>
+    </ul>
+</ul>
+</details>
+<br>
+
+### Results
+
+As mentioned, the vignette effect is already [merged into master](https://github.com/appleseedhq/appleseed/commit/229d8ea9d40147eddadf8bc60e604ab5b54743c2) (together with its improved implementation, which takes advantage of multi-threading).
+
+[Bloom](https://github.com/appleseedhq/appleseed/pull/2875) and two fixes to appleseed.studio I made ([#2877](https://github.com/appleseedhq/appleseed/pull/2877), [#2880](https://github.com/appleseedhq/appleseed/pull/2880)) have already received a first, overall, review.
+
+Unfortunately, development around appleseed has slowed down a bit after the pandemic, so the pull requests for [tone mapping](https://github.com/appleseedhq/appleseed/pull/2884) and [chromatic aberration](https://github.com/appleseedhq/appleseed/pull/2887) have not yet started to be reviewed.
+
+Hence, my changes for interactively updating appleseed.studio's viewport as effect parameters are changed -- and previewing how the complete stack of post rendering stages make the render look like, as a rendering is paused / stopped -- are still in [draft](https://github.com/appleseedhq/appleseed/pull/2885), since getting the user experience right first requires users to experience the effects, so it should still undergo changes as other effects get merged into master.
+
+## Future Work
+
+### 1. GPU accelerated effects
+<!--
+    GLSL (.studio already has OpenGL integrated in the viewport for lightpaths viz)
+    Halide (?)
+-->
+### 2. Extended tone mapping
+<!--
+    LUTs (user / real camera curves)
+    graph widget in .studio
+    select between: luminance / max(RGB) / avg(RGB) / separate RGB channels
+-->
+### 3. UX (miscelaneous) improvements
+<!--
+    preview effects in a downsized scale (for more responsiveness)
+    toggle (all) post-processings stages on/off when a rendering isn't running
+    add hints when the mouse is over a parameter in .studio
+    live effects preview (i.e. on interactive renderings)
+    show stages by their order value (and warn if it's "wrong", e.g. bloom after tone mapping)
+    move effects in blenderseed from the render settings to nodes (?)
+    "non-destructive" editing (e.g. maybe save a "post-processing layer")
+    save scenes with previewed effects (could be an option.. found the issue while testing)
+-->
+
+## Conclusion & Final Words
+
+I learned a lot during GSoC, not only technically, but also in the ways of approaching challenging problems, communicating ideas and deciding when to shift focus. I am super thrilled to see everything I worked on for the past few months be included in a future release, and hope to continue contributing to appleseed.
+
+I would like to say a **huge thank you** to the community around appleseed, as there are so many knowledgeable people who have always been super kind, and helped me a lot.
+
+Lastly, a special thank you to my mentor, [Kevin Masson](https://github.com/oktomus), for the many advices, and for pushing me to *do the hard things first*. This is something I will take with me going forward.
+
