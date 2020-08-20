@@ -94,8 +94,16 @@
   - [x] Work on the final project report
 
 ### 16th week (August 17) 👈
-  - [ ] Final polishes (i.e. testing and minor fixes)
-  - [ ] Work on the final project report
+  - [x] Final polishes (i.e. testing and minor fixes)
+  - [x] Work on the final project report
   - [ ] Create an "eye-candy" scene
 
 ## Project Conclusion *(August 24 to September 9)*
+### Final week (August 24)
+  - 🏁 GSoC students submit their code, project summaries, and final evaluations of their mentors *(August 24 - 31)*
+  - [ ] Submit the final evaluation
+  - [ ] Submit the final report
+
+### Conclusion
+  - 🏁 GSoC mentors review student code samples and determine if the students have successfully completed their project *(August 31 - September 7)*
+  - 🏁 GSoC results are announced *(September 8)*
