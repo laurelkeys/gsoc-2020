@@ -1,5 +1,6 @@
 *.png
-utils/scenes/
+!misc/images/finalreport/*.png
+misc/scenes/
 
 # VS Code
 .vscode/

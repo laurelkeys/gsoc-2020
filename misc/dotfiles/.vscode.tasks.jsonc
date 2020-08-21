@@ -1,0 +1,159 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run test suite",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}\\scripts\\runtestsuite"
+            },
+            "command": "D:\\Programs\\Python\\Python27\\python.exe",
+            "args": [
+                "runtestsuite.py",
+                "-t",
+                "${workspaceFolder}\\sandbox\\bin\\vc141\\${input:buildType}\\appleseed.cli.exe",
+                "${workspaceFolder}\\sandbox\\tests\\test scenes\\${input:testFolder}"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Run appleseed.cli",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}\\sandbox\\tests\\test scenes\\${input:testFolder}",
+                "env": {
+                    "PYTHON_ROOT": "D:\\Programs\\Python"
+                }
+            },
+            "command": "${workspaceFolder}\\sandbox\\bin\\vc141\\${input:buildType}\\appleseed.cli.exe",
+            "args": [
+                // NOTE change the following values:
+                "--resolution",
+                "1024",
+                "1024",
+
+                "--threads",
+                "4",
+
+                "--output",
+                "\"out.png\"",
+
+                "\"09 - railings.appleseed\""
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Run appleseed.studio",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}\\sandbox",
+                "env": {
+                    "PYTHONHOME": "D:\\Programs\\Python\\Python27",
+                    "PATH": "D:\\dev\\Appleseed\\dependencies\\qt\\qt-5.12.6-dynamic-msvc2017-x86_64\\bin;%PYTHONHOME%;${env:PATH}",
+                    "PYTHONPATH": "D:\\dev\\Appleseed\\appleseed\\sandbox\\lib\\vc141\\${input:buildType}\\python"
+                }
+            },
+            "command": "start",
+            "args": [
+                "${workspaceFolder}\\sandbox\\bin\\vc141\\${input:buildType}\\appleseed.studio.exe"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Open .sln in Visual Studio",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}\\build"
+            },
+            "command": "start",
+            "args": [
+                "appleseed.sln"
+            ],
+            "group": "none",
+            "presentation": {
+                "echo": false,
+                "reveal": "never",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}\\build",
+                "env": {
+                    "DEPS_ROOT": "D:\\dev\\Appleseed\\dependencies",
+                    "PYTHON_ROOT": "D:\\Programs\\Python"
+                }
+            },
+            "command": "cmake",
+            "args": [
+                "-Wno-dev",
+                "-G",
+                "\"Visual Studio 16 2019\"",
+                "-T",
+                "v141",
+                "-DCMAKE_BUILD_TYPE=\"${input:buildType}\"",
+                "-DWITH_CLI=ON",
+                "-DWITH_BENCH=OFF",
+                "-DWITH_TOOLS=OFF",
+                "-DWITH_PYTHON3_BINDINGS=ON",
+                "-DWITH_EMBREE=ON",
+                "-DWITH_SPECTRAL_SUPPORT=OFF",
+                "-DUSE_SSE42=ON",
+                "-DBOOST_ROOT=%DEPS_ROOT%\\boost_1_69_0",
+                "-DCMAKE_PREFIX_PATH=%DEPS_ROOT%\\qt\\qt-5.12.6-dynamic-msvc2017-x86_64",
+                "-DPYTHON_INCLUDE_DIR=%PYTHON_ROOT%\\Python27\\include",
+                "-DPYTHON_LIBRARY=%PYTHON_ROOT%\\Python27\\libs\\python27.lib",
+                "-DPYTHON3_INCLUDE_DIR=%PYTHON_ROOT%\\Python37\\include",
+                "-DPYTHON3_LIBRARY=%PYTHON_ROOT%\\Python37\\libs\\python37.lib",
+                "-DAPPLESEED_DEPS_STAGE_DIR=%DEPS_ROOT%\\windows-deps\\stage\\vc141",
+                ".."
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "buildType",
+            "type": "pickString",
+            "default": "Release",
+            "options": [
+                "Release",
+                "Debug",
+                "Ship",
+                "Profile"
+            ],
+            "description": "CMake build type"
+        },
+        {
+            "id": "testFolder",
+            "type": "pickString",
+            "options": [
+                "bloom",
+                "tonemap",
+                "vignette"
+            ],
+            "description": "Test scenes folder"
+        }
+    ]
+}

@@ -9,11 +9,11 @@
  -->
 
 ## New Post-Processing Stages
-This year I was really excited to have been selected by [appleseed](https://appleseedhq.net/) -- an open source rendering engine designed for animation and visual effects -- to participate in [Google Summer of Code 2020](https://summerofcode.withgoogle.com/projects/#5361208732942336) (GSoC).
+This year I was really excited to have been selected by [appleseed](https://appleseedhq.net/) – an open source rendering engine designed for animation and visual effects – to participate in [Google Summer of Code 2020](https://summerofcode.withgoogle.com/projects/#5361208732942336) (GSoC).
 
-[My project focused on](https://github.com/laurelkeys/gsoc-2020/blob/master/gsoc-proposal.md#synopsis) extending appleseed's stack of post-processing stages -- which previously consisted of only two: a Render Stamp, to add text information, and a Color Map stage for visualizing relative luminance -- with a good number of high-quality post-processing effects, aimed towards artists.
+[My project focused on](https://github.com/laurelkeys/gsoc-2020/blob/master/gsoc-proposal.md#synopsis) extending appleseed's stack of post-processing stages – which previously consisted of only two: a Render Stamp, to add text information, and a Color Map stage for visualizing relative luminance – with a good number of high-quality post-processing effects, aimed towards artists. Post effects are image filters and transforms frequently used by artists to make their renders more realistic or stylized.
 
-I set out to implement four new post-processing stages -- [Vignette](https://en.wikipedia.org/wiki/Vignetting), [Bloom](https://en.wikipedia.org/wiki/Bloom_(shader_effect)), [Tone Map](https://en.wikipedia.org/wiki/Tone_mapping), and [Chromatic Aberration](https://en.wikipedia.org/wiki/Chromatic_aberration) -- alongside improvements to [appleseed.studio](https://appleseedhq.net/docs/appleseed.studio.html), appleseed's standalone GUI lookdev application.
+I set out to implement four new image effects as post-processing stages – [Vignette](https://en.wikipedia.org/wiki/Vignetting), [Bloom](https://en.wikipedia.org/wiki/Bloom_(shader_effect)), [Tone Map](https://en.wikipedia.org/wiki/Tone_mapping), and [Chromatic Aberration](https://en.wikipedia.org/wiki/Chromatic_aberration) – alongside improvements to [appleseed.studio](https://appleseedhq.net/docs/appleseed.studio.html), appleseed's standalone GUI lookdev application.
 
 ## Summary
 Pior to the beginning of GSoC, I started working on some small issues to get to know the project, and interacting with the community made me excited to work on appleseed. This led to my first notable contribution at the end of March, [introducing a new vignette effect](https://github.com/appleseedhq/appleseed/pull/2807) (although the implementation was quite straight-forward and not optimized).
@@ -22,17 +22,17 @@ Since I had already made some contributions to appleseed, during the [Community 
 
 My aim with it was twofold:
 
-1. To make it really simple to separate the actual *effect algorithm* -- i.e. what / how to process the image -- from its execution schedule, and from exposing parameters to the user; and
+1. To make it really simple to separate the actual *effect algorithm* – i.e. what / how to process the image – from its execution schedule, and from exposing parameters to the user; and
 
-2. To seamlessly handle concurrency -- for effects that allow it -- by leaveraging appleseed's job system to run the effect on smaller portions of the image, in parallel, given the number of available threads.
+2. To seamlessly handle concurrency – for effects that allow it – by leaveraging appleseed's job system to run the effect on smaller portions of the image, in parallel, given the number of available threads.
 
 I successfully finished it at the end of May, and after some really insightful suggestions from [François Beaune](https://github.com/dictoon) and [Kevin Mason](https://github.com/oktomus) to improve its simplicity, we [got it merged in early June](https://github.com/appleseedhq/appleseed/pull/2865).
 
-Thereon, I implemented the remaining effects using this "effects abstraction" I created, starting with [bloom](https://github.com/appleseedhq/appleseed/pull/2875) -- which was the most challenging one, and required a lot of testing, comparisons between different implementation trade-offs and profiling (all of which you can [read more about on a post I made to the appleseed Users Forum](https://forum.appleseedhq.net/t/bloom-as-a-new-post-processing-effect/1027)) -- and then moving on to [tone mapping](https://github.com/appleseedhq/appleseed/pull/2884) and [chromatic aberration](https://github.com/appleseedhq/appleseed/pull/2887).
+Thereon, I implemented the remaining effects using this "[compression layer](https://caseymuratori.com/blog_0015)" I created, starting with [bloom](https://github.com/appleseedhq/appleseed/pull/2875) – which was the most challenging one, and required a lot of testing, comparisons between different implementation trade-offs, and profiling (all of which you can [read more about on a post I made to the appleseed Users Forum](https://forum.appleseedhq.net/t/bloom-as-a-new-post-processing-effect/1027)) – and then, moving on to [tone mapping](https://github.com/appleseedhq/appleseed/pull/2884) and [chromatic aberration](https://github.com/appleseedhq/appleseed/pull/2887).
 
-Along the way, I also came across [some](https://github.com/appleseedhq/appleseed/pull/2877) [bugs](https://github.com/appleseedhq/appleseed/pull/2880) on appleseed.studio -- while testing the post effects -- and worked on [enhancing effects preview to improve the user experience](https://github.com/appleseedhq/appleseed/pull/2885) (which was only possible after a rendering finished, adding delays to the artistic process of iteratively testing changes).
+Along the way, I also came across [some](https://github.com/appleseedhq/appleseed/pull/2877) [bugs](https://github.com/appleseedhq/appleseed/pull/2880) on appleseed.studio – while testing the post effects – and worked on [enhancing effects preview to improve the user experience](https://github.com/appleseedhq/appleseed/pull/2885) (which was only possible after a rendering finished, adding delays to the artistic process of iteratively testing changes).
 
-These changes, however, are still pending review. Though, once a new release of appleseed ships with these brand-new effects, artists should be able to quickly preview what their scenes would look like in post -- without having to leave appleseed.studio -- and to easily tweak stage parameters while seeing the effect they have live.
+These changes, however, are still pending review. Though, once a new release of appleseed ships with these brand-new effects, artists should be able to quickly preview what their scenes would look like in post – without having to leave appleseed.studio – and to easily tweak stage parameters while seeing the effect they have live.
 
 ## The Code
 
@@ -78,7 +78,6 @@ These changes, however, are still pending review. Though, once a new release of 
     </ul>
 </ul>
 </details>
-<br>
 
 ### Results
 
@@ -88,32 +87,39 @@ As mentioned, the vignette effect is already [merged into master](https://github
 
 Unfortunately, development around appleseed has slowed down a bit after the pandemic, so the pull requests for [tone mapping](https://github.com/appleseedhq/appleseed/pull/2884) and [chromatic aberration](https://github.com/appleseedhq/appleseed/pull/2887) have not yet started to be reviewed.
 
-Hence, my changes for interactively updating appleseed.studio's viewport as effect parameters are changed -- and previewing how the complete stack of post rendering stages make the render look like, as a rendering is paused / stopped -- are still in [draft](https://github.com/appleseedhq/appleseed/pull/2885), since getting the user experience right first requires users to experience the effects, so it should still undergo changes as other effects get merged into master.
+Hence, my changes for interactively updating appleseed.studio's viewport as effect parameters are changed – and previewing how the complete stack of post rendering stages make the render look like, as a rendering is paused / stopped – are still in [draft](https://github.com/appleseedhq/appleseed/pull/2885), since getting the user experience right first requires users to experience the effects, so it should still undergo changes as other effects get merged into master.
 
 ## Future Work
 
+As pretty much everything in software, there are always ways in which things could be improved. Below I list my three picks for "cherries on the cake" that could follow up on the work that has been done:
+
 ### 1. GPU accelerated effects
-<!--
-    GLSL (.studio already has OpenGL integrated in the viewport for lightpaths viz)
-    Halide (?)
--->
+One of the main ways we can improve the creative process for artists is to provide an [immediate connection](https://www.youtube.com/watch?v=EGqwXt90ZqA&feature=youtu.be&t=105) with what they are creating.
+
+Therefore, by running the effects on the GPU we can get huge speed boosts, which would enable them to be previewed in real-time on [interactive rendering](https://vimeo.com/127622613). The simplest way to do this would be to convert the effects to GLSL code – what should be really straight-forward, given the logical division made to run them in parallel – another thing that might be worth looking into is [Halide](https://halide-lang.org/), a DSL in C++ for high-performance image processing.
+
 ### 2. Extended tone mapping
-<!--
-    LUTs (user / real camera curves)
-    graph widget in .studio
-    select between: luminance / max(RGB) / avg(RGB) / separate RGB channels
--->
-### 3. UX (miscelaneous) improvements
-<!--
-    preview effects in a downsized scale (for more responsiveness)
-    toggle (all) post-processings stages on/off when a rendering isn't running
-    add hints when the mouse is over a parameter in .studio
-    live effects preview (i.e. on interactive renderings)
-    show stages by their order value (and warn if it's "wrong", e.g. bloom after tone mapping)
-    move effects in blenderseed from the render settings to nodes (?)
-    "non-destructive" editing (e.g. maybe save a "post-processing layer")
-    save scenes with previewed effects (could be an option.. found the issue while testing)
--->
+Tone mapping is an often requested effect. These are possibilities of making it even more useful, decreasing the need for third-party DCC tools:
+* Add tone curves for real cameras, as well as user-defined "looks", with [LUT](https://www.studiobinder.com/blog/what-is-lut/)s
+* Include a plotting widget in appleseed.studio's `Attribute Editor` for visualizing the tone mapping operator curve, and previewing changes to it
+* Let the user choose between tone mapping:
+  * Only luminance values (available for [Reinhard curves](https://www.cs.utah.edu/~reinhard/cdrom/tonemap.pdf))
+  * Each RGB channel separately (default for all other operators)
+  * Operating with [`max(R, G, B)`](https://gpuopen.com/learn/optimized-reversible-tonemapper-for-resolve/) or `average(R, G, B)` values
+
+![](misc/images/finalreport/tone%20map%20-%20comparison.gif)
+*Tone mapping operators comparison (on [The Breakfast Room](https://benedikt-bitterli.me/resources/) scene)*
+
+### 3. UX (miscellaneous) improvements
+Keeping with the theme of fluidity and ease of use, here are some ideas to improve the user experience when experimenting with post effects in appleseed.studio:
+* Allow previewing effects in downsized scales (for faster processing and greater responsiveness)
+* Toggle multiple post-processing stages on/off when a rendering isn't running
+* Give the option of saving (unfinished) renderings with the previewed effects
+* Add hints when the mouse is over stage settings, explaining what they do
+* Store effects in a separate layer, for non-destructive editing
+
+![](misc/images/finalreport/studio%20ui.png)
+*appleseed.studio `Attribute Editor`, used for changing post-processing stage parameters*
 
 ## Conclusion & Final Words
 
