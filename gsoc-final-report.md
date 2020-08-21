@@ -18,6 +18,10 @@ I set out to implement four new image effects as post-processing stages – [Vig
 ## Summary
 Pior to the beginning of GSoC, I started working on some small issues to get to know the project, and interacting with the community made me excited to work on appleseed. This led to my first notable contribution at the end of March, [introducing a new vignette effect](https://github.com/appleseedhq/appleseed/pull/2807) (although the implementation was quite straight-forward and not optimized).
 
+| Original [Coffe Maker](https://benedikt-bitterli.me/resources/) scene | Moderate vignetting | Intense vignetting |
+| :---: | :---: | :---: |
+| ![](misc/images/finalreport/vignette%20(none)%20-%20coffee.png) | ![](misc/images/finalreport/vignette%20(moderate)%20-%20coffee.png) | ![](misc/images/finalreport/vignette%20(intense)%20-%20coffee.png) |
+
 Since I had already made some contributions to appleseed, during the [Community Bonding period](https://google.github.io/gsocguides/student/how-gsoc-works) I focused on writing a [new abstraction layer for post-processing stages](https://github.com/appleseedhq/appleseed/pull/2865), on top of which I would refactor the vignette effect I had implemented, and also build the new, more complex, effects.
 
 My aim with it was twofold:
@@ -29,6 +33,9 @@ My aim with it was twofold:
 I successfully finished it at the end of May, and after some really insightful suggestions from [François Beaune](https://github.com/dictoon) and [Kevin Mason](https://github.com/oktomus) to improve its simplicity, we [got it merged in early June](https://github.com/appleseedhq/appleseed/pull/2865).
 
 Thereon, I implemented the remaining effects using this "[compression layer](https://caseymuratori.com/blog_0015)" I created, starting with [bloom](https://github.com/appleseedhq/appleseed/pull/2875) – which was the most challenging one, and required a lot of testing, comparisons between different implementation trade-offs, and profiling (all of which you can [read more about on a post I made to the appleseed Users Forum](https://forum.appleseedhq.net/t/bloom-as-a-new-post-processing-effect/1027)) – and then, moving on to [tone mapping](https://github.com/appleseedhq/appleseed/pull/2884) and [chromatic aberration](https://github.com/appleseedhq/appleseed/pull/2887).
+
+![](misc/images/finalreport/bloom%20-%20as%20sphere.png)
+*Rendering with (bottom-left) and without (top-right) the bloom effect*
 
 Along the way, I also came across [some](https://github.com/appleseedhq/appleseed/pull/2877) [bugs](https://github.com/appleseedhq/appleseed/pull/2880) on appleseed.studio – while testing the post effects – and worked on [enhancing effects preview to improve the user experience](https://github.com/appleseedhq/appleseed/pull/2885) (which was only possible after a rendering finished, adding delays to the artistic process of iteratively testing changes).
 
@@ -118,7 +125,7 @@ Keeping with the theme of fluidity and ease of use, here are some ideas to impro
 * Add hints when the mouse is over stage settings, explaining what they do
 * Store effects in a separate layer, for non-destructive editing
 
-![](misc/images/finalreport/studio%20ui.png)
+![](misc/images/finalreport/studio%20ui%20(shrinked).png)
 *appleseed.studio `Attribute Editor`, used for changing post-processing stage parameters*
 
 ## Conclusion & Final Words

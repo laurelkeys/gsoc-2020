@@ -96,7 +96,7 @@
 ### 16th week (August 17) 👈
   - [x] Final polishes (i.e. testing and minor fixes)
   - [x] Work on the final project report
-  - [ ] Create an "eye-candy" scene
+  - [x] Create an "eye-candy" scene
 
 ## Project Conclusion *(August 24 to September 9)*
 ### Final week (August 24)
