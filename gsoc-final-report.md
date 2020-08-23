@@ -15,6 +15,8 @@ This year I was really excited to have been selected by [appleseed](https://appl
 
 I set out to implement four new image effects as post-processing stages – [Vignette](https://en.wikipedia.org/wiki/Vignetting), [Bloom](https://en.wikipedia.org/wiki/Bloom_(shader_effect)), [Tone Map](https://en.wikipedia.org/wiki/Tone_mapping), and [Chromatic Aberration](https://en.wikipedia.org/wiki/Chromatic_aberration) – alongside improvements to [appleseed.studio](https://appleseedhq.net/docs/appleseed.studio.html), appleseed's standalone GUI lookdev application.
 
+For further details, you can check out my [original proposal](gsoc-gsoc-proposal.md), as well as my [weekly progress reports](gsoc-weekly.md).
+
 ## Summary
 Pior to the beginning of GSoC, I started working on some small issues to get to know the project, and interacting with the community made me excited to work on appleseed. This led to my first notable contribution at the end of March, [introducing a new vignette effect](https://github.com/appleseedhq/appleseed/pull/2807) (although the implementation was quite straight-forward and not optimized).
 
@@ -97,11 +99,13 @@ Unfortunately, development around appleseed has slowed down a bit after the pand
 Hence, my changes for interactively updating appleseed.studio's viewport as effect parameters are changed – and previewing how the complete stack of post rendering stages make the render look like, as a rendering is paused / stopped – are still in [draft](https://github.com/appleseedhq/appleseed/pull/2885), since getting the user experience right first requires users to experience the effects, so it should still undergo changes as other effects get merged into master.
 
 ![](misc/images/finalreport/tone%20map%20-%20starship%20(shrinked).png)
-*Modified [Spaceship](https://benedikt-bitterli.me/resources/) scene, with different tone mapping curves.*
+*Modified [Spaceship](https://benedikt-bitterli.me/resources/) scene, with details showing the original (left) and tone mapped images (right, with decreasing exposure values)*
 
 ## Future Work
 
-As pretty much everything in software, there are always ways in which things could be improved. Below I list my three picks for "cherries on the cake" that could follow up on the work that has been done:
+As pretty much everything in software, there are always ways in which things could be improved.
+
+Below I list my three picks for "cherries on the cake" that could follow up on the work that has been done:
 
 ### 1. GPU accelerated effects
 One of the main ways we can improve the creative process for artists is to provide an [immediate connection](https://www.youtube.com/watch?v=EGqwXt90ZqA&feature=youtu.be&t=105) with what they are creating.
@@ -109,7 +113,9 @@ One of the main ways we can improve the creative process for artists is to provi
 Therefore, by running the effects on the GPU we can get huge speed boosts, which would enable them to be previewed in real-time on [interactive rendering](https://vimeo.com/127622613). The simplest way to do this would be to convert the effects to GLSL code – what should be really straight-forward, given the logical division made to run them in parallel – another thing that might be worth looking into is [Halide](https://halide-lang.org/), a DSL in C++ for high-performance image processing.
 
 ### 2. Extended tone mapping
-Tone mapping is an often requested effect. These are possibilities of making it even more useful, decreasing the need for third-party DCC tools:
+Tone mapping is an often requested effect – since physically-based renderings work in High Dynamic Range ([HDR](https://en.wikipedia.org/wiki/High-dynamic-range_imaging)), but most monitors can only display RGB values on the [0, 255] range, so we need to map the HDR color values into this Low Dynamic Range (LDR).
+
+These are possibilities of making it even more useful inside appleseed.studio, decreasing the need for third-party DCC tools:
 * Add tone curves for real cameras, as well as user-defined "looks", with [LUT](https://www.studiobinder.com/blog/what-is-lut/)s
 * Include a plotting widget in appleseed.studio's `Attribute Editor` for visualizing the tone mapping operator curve, and previewing changes to it
 * Let the user choose between tone mapping:

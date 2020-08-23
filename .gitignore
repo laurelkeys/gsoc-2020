@@ -1,5 +1,6 @@
 *.png
 !misc/images/finalreport/*.png
+!misc/images/eyecandy/*.png
 misc/scenes/
 
 # VS Code

@@ -3,8 +3,8 @@
  - [Community Bonding *(May 4 to June 1)*](#community-bonding-may-4-to-june-1)
  - [Phase 1 *(June 1 to June 29)*](#phase-1-june-1-to-june-29)
  - [Phase 2 *(June 29 to July 27)*](#phase-2-june-29-to-july-27)
- - [Phase 3 *(July 27 to August 24)*](#phase-3-july-27-to-august-24) 👈
- - [Project Conclusion *(August 24 to September 9)*](#project-conclusion-august-24-to-september-9)
+ - [Phase 3 *(July 27 to August 24)*](#phase-3-july-27-to-august-24)
+ - [Project Conclusion *(August 24 to September 9)*](#project-conclusion-august-24-to-september-9) 👈
 
 ## Community Bonding *(May 4 to June 1)*
 ### 1st week (May 4)
@@ -17,7 +17,6 @@
 ### 2nd week (May 11)
   - [x] Refactoring of the Vignette effect implementation (*branch:* [`postfx-jobs`](https://github.com/laurelkeys/appleseed/tree/postfx-jobs), *PR:* [#2865](https://github.com/appleseedhq/appleseed/pull/2865))
   - [x] Explore Nuke's [C++ API](https://learn.foundry.com/nuke/developers/121/ndkreference/)
-  - [ ] Read the [OpenFX programming guide](https://openfx.readthedocs.io/en/master/)
 
 ### 3rd week (May 18)
   - [x] Add Vignette test scenes
@@ -93,13 +92,13 @@
   - [x] Final polishes (i.e. testing and minor fixes)
   - [x] Work on the final project report
 
-### 16th week (August 17) 👈
+### 16th week (August 17)
   - [x] Final polishes (i.e. testing and minor fixes)
   - [x] Work on the final project report
   - [x] Create an "eye-candy" scene
 
 ## Project Conclusion *(August 24 to September 9)*
-### Final week (August 24)
+### Final week (August 24) 👈
   - 🏁 GSoC students submit their code, project summaries, and final evaluations of their mentors *(August 24 - 31)*
   - [ ] Submit the final evaluation
   - [ ] Submit the final report
