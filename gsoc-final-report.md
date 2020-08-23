@@ -58,30 +58,30 @@ These changes, however, are still pending review. Though, once a new release of 
 <ul>
     <li>March*</li>
     <ul>
-        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2791">#2791</a>] Add Google AI's Turbo rainbow colormap</li>
-        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2785">#2785</a>] Tile highlights are now colored</li>
-        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2807">#2807</a>] Add Vignette post-processing stage</li>
-        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2806">#2806</a>] Ignore incandescence color in black-body mode</li>
+        <li>[🟣 <a href="https://github.com/appleseedhq/appleseed/pull/2791">#2791</a>] Add Google AI's Turbo rainbow colormap</li>
+        <li>[🟣 <a href="https://github.com/appleseedhq/appleseed/pull/2785">#2785</a>] Tile highlights are now colored</li>
+        <li>[🟣 <a href="https://github.com/appleseedhq/appleseed/pull/2807">#2807</a>] Add Vignette post-processing stage</li>
+        <li>[🟣 <a href="https://github.com/appleseedhq/appleseed/pull/2806">#2806</a>] Ignore incandescence color in black-body mode</li>
     </ul>
     <li>April*</li>
     <ul>
-        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2855">#2855</a>] Fix double slider regression</li>
+        <li>[🟣 <a href="https://github.com/appleseedhq/appleseed/pull/2855">#2855</a>] Fix double slider regression</li>
     </ul>
     <li>June</li>
     <ul>
-        <li>[Merged <a href="https://github.com/appleseedhq/appleseed/pull/2865">#2865</a>] Refactor the vignette post-processing stage</li>
-        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2875">#2875</a>] Add Bloom post-processing stage</li>
-        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2877">#2877</a>] Fix Shift+F5 causing False Colors to be applied twice</li>
+        <li>[🟣 <a href="https://github.com/appleseedhq/appleseed/pull/2865">#2865</a>] Refactor the vignette post-processing stage</li>
+        <li>[🟢 <a href="https://github.com/appleseedhq/appleseed/pull/2875">#2875</a>] Add Bloom post-processing stage</li>
+        <li>[🟢 <a href="https://github.com/appleseedhq/appleseed/pull/2877">#2877</a>] Fix Shift+F5 causing False Colors to be applied twice</li>
     </ul>
     <li>July</li>
     <ul>
-        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2880">#2880</a>] Fix false colors not being applied to all tiles on a final render</li>
-        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2884">#2884</a>] Add Tone Map post-processing stage</li>
+        <li>[🟢 <a href="https://github.com/appleseedhq/appleseed/pull/2880">#2880</a>] Fix false colors not being applied to all tiles on a final render</li>
+        <li>[🟢 <a href="https://github.com/appleseedhq/appleseed/pull/2884">#2884</a>] Add Tone Map post-processing stage</li>
     </ul>
     <li>August</li>
     <ul>
-        <li>[Draft  <a href="https://github.com/appleseedhq/appleseed/pull/2885">#2885</a>] Preview post-processing stage changes in appleseed.studio</li>
-        <li>[Open   <a href="https://github.com/appleseedhq/appleseed/pull/2887">#2887</a>] Add Chromatic Aberration post-processing stage</li>
+        <li>[⚫ <a href="https://github.com/appleseedhq/appleseed/pull/2885">#2885</a>] Preview post-processing stage changes in appleseed.studio</li>
+        <li>[🟢 <a href="https://github.com/appleseedhq/appleseed/pull/2887">#2887</a>] Add Chromatic Aberration post-processing stage</li>
     </ul>
 </ul>
 </details>
@@ -95,6 +95,9 @@ As mentioned, the vignette effect is already [merged into master](https://github
 Unfortunately, development around appleseed has slowed down a bit after the pandemic, so the pull requests for [tone mapping](https://github.com/appleseedhq/appleseed/pull/2884) and [chromatic aberration](https://github.com/appleseedhq/appleseed/pull/2887) have not yet started to be reviewed.
 
 Hence, my changes for interactively updating appleseed.studio's viewport as effect parameters are changed – and previewing how the complete stack of post rendering stages make the render look like, as a rendering is paused / stopped – are still in [draft](https://github.com/appleseedhq/appleseed/pull/2885), since getting the user experience right first requires users to experience the effects, so it should still undergo changes as other effects get merged into master.
+
+![](misc/images/finalreport/tone%20map%20-%20starship%20(shrinked).png)
+*Modified [Spaceship](https://benedikt-bitterli.me/resources/) scene, with different tone mapping curves.*
 
 ## Future Work
 
