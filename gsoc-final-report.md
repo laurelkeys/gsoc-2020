@@ -1,12 +1,6 @@
 # Google Summer of Code 2020 - appleseed - Final Report
 
 🚧 Work in Progress 🚧
-<!-- https://developers.google.com/open-source/gsoc/help/work-product -->
-<!--
-    In brief: The target of the link should contain a short description of what work was done, what code got merged, what
-    code didn't get merged, and what's left to do. The best examples of this we saw in past years were "final reports" that
-    made it easy to find the code, summarized the current state of the project, and enumerated challenges and learnings.
- -->
 
 ## New Post-Processing Stages
 This year I was really excited to have been selected by [appleseed](https://appleseedhq.net/) – an open source rendering engine designed for animation and visual effects – to participate in [Google Summer of Code 2020](https://summerofcode.withgoogle.com/projects/#5361208732942336) (GSoC).
@@ -28,7 +22,7 @@ Since I had already made some contributions to appleseed, during the [Community 
 
 My aim with it was twofold:
 
-1. To make it really simple to separate the actual *effect algorithm* – i.e. what / how to process the image – from its execution schedule, and from exposing parameters to the user; and
+1. To make it really simple to separate the actual *effect algorithm* – i.e. what / how to process the image – from its execution schedule, and from exposing parameters to the user
 
 2. To seamlessly handle concurrency – for effects that allow it – by leaveraging appleseed's job system to run the effect on smaller portions of the image, in parallel, given the number of available threads.
 
@@ -41,7 +35,7 @@ Thereon, I implemented the remaining effects using this "[compression layer](htt
 
 Along the way, I also came across [some](https://github.com/appleseedhq/appleseed/pull/2877) [bugs](https://github.com/appleseedhq/appleseed/pull/2880) on appleseed.studio – while testing the post effects – and worked on [enhancing effects preview to improve the user experience](https://github.com/appleseedhq/appleseed/pull/2885) (which was only possible after a rendering finished, adding delays to the artistic process of iteratively testing changes).
 
-These changes, however, are still pending review. Though, once a new release of appleseed ships with these brand-new effects, artists should be able to quickly preview what their scenes would look like in post – without having to leave appleseed.studio – and to easily tweak stage parameters while seeing the effect they have live.
+These changes, however, are still pending review. Though, once a new release of appleseed ships with these brand-new effects, artists should be able to quickly preview what their scenes would look like in post – without having to leave appleseed.studio – and to easily tweak stage parameters while seeing the changes they make live.
 
 ## The Code
 
@@ -96,7 +90,7 @@ As mentioned, the vignette effect is already [merged into master](https://github
 
 Unfortunately, development around appleseed has slowed down a bit after the pandemic, so the pull requests for [tone mapping](https://github.com/appleseedhq/appleseed/pull/2884) and [chromatic aberration](https://github.com/appleseedhq/appleseed/pull/2887) have not yet started to be reviewed.
 
-Hence, my changes for interactively updating appleseed.studio's viewport as effect parameters are changed – and previewing how the complete stack of post rendering stages make the render look like, as a rendering is paused / stopped – are still in [draft](https://github.com/appleseedhq/appleseed/pull/2885), since getting the user experience right first requires users to experience the effects, so it should still undergo changes as other effects get merged into master.
+Hence, my changes for interactively updating appleseed.studio's viewport as effect parameters are modified – and previewing how the complete stack of post rendering stages make the render look like, when a rendering is paused / stopped – are still in [draft](https://github.com/appleseedhq/appleseed/pull/2885), since getting the user experience right first requires users to experience the effects, so it should still undergo changes as other effects get merged into master.
 
 ![](misc/images/finalreport/tone%20map%20-%20starship%20(shrinked).png)
 *Modified [Spaceship](https://benedikt-bitterli.me/resources/) scene, with details showing the original (left) and tone mapped images (right, with decreasing exposure values)*
@@ -110,13 +104,13 @@ Below I list my three picks for "cherries on the cake" that could follow up on t
 ### 1. GPU accelerated effects
 One of the main ways we can improve the creative process for artists is to provide an [immediate connection](https://www.youtube.com/watch?v=EGqwXt90ZqA&feature=youtu.be&t=105) with what they are creating.
 
-Therefore, by running the effects on the GPU we can get huge speed boosts, which would enable them to be previewed in real-time on [interactive rendering](https://vimeo.com/127622613). The simplest way to do this would be to convert the effects to GLSL code – what should be really straight-forward, given the logical division made to run them in parallel – another thing that might be worth looking into is [Halide](https://halide-lang.org/), a DSL in C++ for high-performance image processing.
+Therefore, by running the effects on the GPU we can get huge speed boosts, which would enable them to be previewed in real-time on [interactive rendering](https://vimeo.com/127622613). The simplest way to do this would probably be to convert the effects to GLSL code – what should be straight-forward, given the logical division made to run them in parallel – another thing that might be worth looking into is [Halide](https://halide-lang.org/), a DSL on top of C++ for high-performance image processing.
 
 ### 2. Extended tone mapping
 Tone mapping is an often requested effect – since physically-based renderings work in High Dynamic Range ([HDR](https://en.wikipedia.org/wiki/High-dynamic-range_imaging)), but most monitors can only display RGB values on the [0, 255] range, so we need to map the HDR color values into this Low Dynamic Range (LDR).
 
-These are possibilities of making it even more useful inside appleseed.studio, decreasing the need for third-party DCC tools:
-* Add tone curves for real cameras, as well as user-defined "looks", with [LUT](https://www.studiobinder.com/blog/what-is-lut/)s
+Here are some ways of making it even more useful inside appleseed.studio, decreasing the need for third-party DCC tools:
+* Add tone curves for real cameras, as well as "user-defined looks", with [LUT](https://www.studiobinder.com/blog/what-is-lut/)s
 * Include a plotting widget in appleseed.studio's `Attribute Editor` for visualizing the tone mapping operator curve, and previewing changes to it
 * Let the user choose between tone mapping:
   * Only luminance values (available for [Reinhard curves](https://www.cs.utah.edu/~reinhard/cdrom/tonemap.pdf))
@@ -129,7 +123,7 @@ These are possibilities of making it even more useful inside appleseed.studio, d
 ### 3. UX (miscellaneous) improvements
 Keeping with the theme of fluidity and ease of use, here are some ideas to improve the user experience when experimenting with post effects in appleseed.studio:
 * Allow previewing effects in downsized scales (for faster processing and greater responsiveness)
-* Toggle multiple post-processing stages on/off when a rendering isn't running
+* Choose to toggle multiple post-processing stages on/off when a rendering isn't running
 * Give the option of saving (unfinished) renderings with the previewed effects
 * Add hints when the mouse is over stage settings, explaining what they do
 * Store effects in a separate layer, for non-destructive editing
@@ -143,5 +137,5 @@ I learned a lot during GSoC, not only technically, but also in the ways of appro
 
 I would like to say a **huge thank you** to the community around appleseed, as there are so many knowledgeable people who have always been super kind, and helped me a lot.
 
-Lastly, a special thank you to my mentor, [Kevin Masson](https://github.com/oktomus), for the many advices, and for pushing me to *do the hard things first*. This is something I will take with me going forward.
+Lastly, a special thank you to my mentor, [Kevin Masson](https://github.com/oktomus), for the many advices, and for pushing me to not be afraid to *do the hard things first*. This is something I will take with me going forward.
 
