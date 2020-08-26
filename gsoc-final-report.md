@@ -1,7 +1,5 @@
 # Google Summer of Code 2020 - appleseed - Final Report
 
-🚧 Work in Progress 🚧
-
 ## New Post-Processing Stages
 This year I was really excited to have been selected by [appleseed](https://appleseedhq.net/) – an open source rendering engine designed for animation and visual effects – to participate in [Google Summer of Code 2020](https://summerofcode.withgoogle.com/projects/#5361208732942336) (GSoC).
 
@@ -10,6 +8,9 @@ This year I was really excited to have been selected by [appleseed](https://appl
 I set out to implement four new image effects as post-processing stages – [Vignette](https://en.wikipedia.org/wiki/Vignetting), [Bloom](https://en.wikipedia.org/wiki/Bloom_(shader_effect)), [Tone Map](https://en.wikipedia.org/wiki/Tone_mapping), and [Chromatic Aberration](https://en.wikipedia.org/wiki/Chromatic_aberration) – alongside improvements to [appleseed.studio](https://appleseedhq.net/docs/appleseed.studio.html), appleseed's standalone GUI lookdev application.
 
 For further details, you can check out my [original proposal](gsoc-gsoc-proposal.md), as well as my [weekly progress reports](gsoc-weekly.md).
+
+![](misc/images/finalreport/studio%20interactive%20preview%20demo.gif)
+*Showcase of the interactive preview of effect changes, inside appleseed.studio*
 
 ## Summary
 Pior to the beginning of GSoC, I started working on some small issues to get to know the project, and interacting with the community made me excited to work on appleseed. This led to my first notable contribution at the end of March, [introducing a new vignette effect](https://github.com/appleseedhq/appleseed/pull/2807) (although the implementation was quite straight-forward and not optimized).
