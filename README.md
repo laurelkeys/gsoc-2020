@@ -1,5 +1,5 @@
 # gsoc-2020
-"[New Post-Processing Stages](https://summerofcode.withgoogle.com/projects/#5361208732942336)" for [appleseed](http://appleseedhq.net/) | Google Summer of Code 2020 ([GSoC](https://summerofcode.withgoogle.com/about/))
+"[New Post-Processing Stages](https://summerofcode.withgoogle.com/archive/2020/projects/4671601607442432/)" for [appleseed](http://appleseedhq.net/) | Google Summer of Code 2020 ([GSoC](https://summerofcode.withgoogle.com/about/))
 
 ## Project write-ups
 - **[Final report](gsoc-final-report.md)**
